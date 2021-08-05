@@ -1,0 +1,24 @@
+{
+    "name": "dangquangha/render-sitemap-xml",
+    "authors": [
+        {
+            "name": "Quang Ha",
+            "email": "quangha2611@gmail.com"
+        }
+    ],
+    "require": {
+        "roumen/sitemap": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SitemapRenderXML\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SitemapRenderXML\\SitemapRenderServiceProvider"
+            ]
+        }
+    }
+}
