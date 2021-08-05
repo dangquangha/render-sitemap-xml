@@ -1,5 +1,8 @@
 # Render Sitemap XML
-This package will help render your website's sitemap xml
+### This package will help render your website's sitemap xml
+
+You can understand how this package works through the following picture
+<img src="https://github.com/dangquangha/render-sitemap-xml/blob/master/images/work_flow.jpg">
 
 To use this package, please follow the steps below:
 
