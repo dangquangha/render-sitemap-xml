@@ -61,13 +61,12 @@ class SiteMapManager
 
     protected function renderUrls($module)
     {
-        DB::table($module['table_name'])
+        $urls = DB::table($module['table_name'])
             ->select(['id', 'check_sitemap', $module['field_url_seo']])
             ->where("check_sitemap", "=", 0)
-            ->orderBy("id")
-            ->chunkById(400, function ($urls) use ($module) {
-                $this->processUrls($urls, $module);
-            });
+            ->orderBy("id")->get();
+
+        $this->processUrls($urls, $module);
 
         $this->siteMapRender->setUrls($this->urlCollection)->render();
 
